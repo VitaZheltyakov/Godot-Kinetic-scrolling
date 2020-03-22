@@ -3,7 +3,7 @@
 This script extends the Godot ScrollContainer - adds kinetic scrolling and swipe support. It works on PC and mobile devices. The ability to correctly work with objects inside the ScrollContainer is saved. Kinetic scrolling works correctly when using the mouse wheel. 
 
 ## How to use?
-Just connect it to the ScrollContainer. To work correctly with objects inside the ScrollContainer, you need to check the status of the scroll (variable "swiping"). Watch the demo.
+Just connect **ScrollContainer.gd** to the ScrollContainer. To work correctly with objects inside the ScrollContainer, you need to check the status of the scroll (variable "swiping"). Watch the demo.
 
 The following **settings** are available: 
 * Scroll Direction - variable determines the direction of the scroll;
