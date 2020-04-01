@@ -163,6 +163,28 @@ rect_min_size = Vector2( 400, 800 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Button 8"
+
+[node name="CheckButton1" type="CheckButton" parent="."]
+margin_left = 50.0
+margin_top = 47.0
+margin_right = 213.0
+margin_bottom = 87.0
+pressed = true
+text = "Kinetic Scroll"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton2" type="CheckButton" parent="."]
+margin_left = 805.184
+margin_top = 47.6688
+margin_right = 968.184
+margin_bottom = 87.6688
+pressed = true
+text = "Kinetic Scroll"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_up" from="ScrollContainer1/Panel/HBoxContainer/Button1" to="." method="_on_Button1_button_up"]
 [connection signal="button_up" from="ScrollContainer1/Panel/HBoxContainer/Button2" to="." method="_on_Button2_button_up"]
 [connection signal="button_up" from="ScrollContainer1/Panel/HBoxContainer/Button3" to="." method="_on_Button3_button_up"]
@@ -171,3 +193,5 @@ text = "Button 8"
 [connection signal="button_up" from="ScrollContainer2/Panel/HBoxContainer/Button6" to="." method="_on_Button6_button_up"]
 [connection signal="button_up" from="ScrollContainer2/Panel/HBoxContainer/Button7" to="." method="_on_Button7_button_up"]
 [connection signal="button_up" from="ScrollContainer2/Panel/HBoxContainer/Button8" to="." method="_on_Button8_button_up"]
+[connection signal="toggled" from="CheckButton1" to="." method="_on_CheckButton1_toggled"]
+[connection signal="toggled" from="CheckButton2" to="." method="_on_CheckButton2_toggled"]

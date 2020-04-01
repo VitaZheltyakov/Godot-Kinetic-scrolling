@@ -2,6 +2,8 @@ extends ScrollContainer
 # The script adds the ability to kinetic scroll for ScrollContainer
 # It is necessary to check the state of the scroll when working with internal controls
 
+# The variable allows you to disable the kinetic scroll
+export var kineticScrollEnable = true
 # The variable determines the direction of the scroll
 export(String, "Horizontal", "Vertical") var scrollDirection = "Horizontal"
 # Variable specifies how long it will continue scrolling
@@ -16,6 +18,9 @@ var swiping = false
 
 var _swipePoint = null
 
+
+func _ready():
+	set_process_input(kineticScrollEnable)
 
 func _input(event):
 	# Check that the cursor is over the scroll area
@@ -67,3 +72,9 @@ func _input(event):
 			self.set_h_scroll(self.get_h_scroll() - event.position.x + _swipePoint.x)
 		if (scrollDirection == "Vertical"):
 			self.set_v_scroll(self.get_v_scroll() - event.position.y + _swipePoint.y)
+
+
+# The function provides disable/enable kinetic scrolling at runtime
+func setKineticScrollEnable(enable: bool):
+	kineticScrollEnable = enable
+	set_process_input(enable)

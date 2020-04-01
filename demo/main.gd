@@ -40,3 +40,14 @@ func _on_Button7_button_up():
 func _on_Button8_button_up():
 	if (!get_node("ScrollContainer2").swiping):
 		print("You pressed the button 8")
+
+
+# Kinetic scroll uses the `_input` function. 
+# Therefore, in some cases, it is desirable to disable it.
+# You can disable kinetic scrolling using the function `setKineticScrollEnable`
+func _on_CheckButton1_toggled(button_pressed):
+	get_node("ScrollContainer1").setKineticScrollEnable(button_pressed)
+
+
+func _on_CheckButton2_toggled(button_pressed):
+	get_node("ScrollContainer2").setKineticScrollEnable(button_pressed)
