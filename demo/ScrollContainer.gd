@@ -23,6 +23,8 @@ func _ready():
 	set_process_input(kineticScrollEnable)
 
 func _input(event):
+	if (not(event is InputEventMouseButton)) and (not(event is InputEventMouseMotion)):
+		return
 	# Check that the cursor is over the scroll area
 	if (!self.get_rect().has_point(event.position)):
 		swiping = false
