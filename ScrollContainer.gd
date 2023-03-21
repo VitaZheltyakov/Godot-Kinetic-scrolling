@@ -13,6 +13,9 @@ export var kineticScrollBias = 0.5
 # The variable determines which offset to consider as a swipe
 export var swipeTolerance = 50
 
+export var hide_v_scrollbar = false
+export var hide_h_scrollbar = false
+
 # The variable shows the state of the scroll. Used to organize the work of internal controls
 var swiping = false
 
@@ -20,6 +23,10 @@ var _swipePoint = null
 
 
 func _ready():
+	if hide_v_scrollbar:
+		self.get_v_scrollbar().modulate = Color.transparent
+	if hide_h_scrollbar:
+		self.get_h_scrollbar().modulate = Color.transparent
 	set_process_input(kineticScrollEnable)
 
 func _input(event):
